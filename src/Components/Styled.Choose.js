@@ -21,6 +21,19 @@ height: 1024px;
         height: 750px;
         background-color: ${lightBlue};
         border-radius: 2rem;
+        ul {
+            list-style-type: none;
+        }
+        button {
+            border: none;
+            background-color: ${darkBlue};
+            color: white;
+            width: 250px;
+            height: 80px;
+            font-size: 20px;
+            border-radius: 40px;
+            font-weight: bold;
+        }
     }
     .big {
         background-color: white;

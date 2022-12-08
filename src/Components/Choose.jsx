@@ -1,59 +1,105 @@
 import React, { useState } from "react";
 import { StyledChoose } from "./Styled.Choose";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
-import { faWordpress } from "@fortawesome/free-brands-svg-icons"
-
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faWordpress } from "@fortawesome/free-brands-svg-icons";
 const Choose = () => {
-
-  const [cartItems, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useState([]);
 
   const handleClick = () => {
-    setCartItems([...cartItems, {id: Date.now(), name: "Item"}])
+    setCartItems([...cartItems, { id: Date.now(), name: "Item" }]);
 
-    window.location.href = "/checkout"
-  }
+    window.location.href = "/domain";
+  };
 
   return (
     <StyledChoose>
       <div className="cards">
         <article>
-          <h2>Avanceret</h2>
-          <p>Bedst til</p>
+          <div>
+            <h2>Begynder</h2>
+            <h4>Bedst til iværksættere</h4>
+          </div>
           <ul>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />1 hjemmeside
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />
+              50GB SSD
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />
+              Ubegrænsede mailkonti
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />
+              Daglige backups
+            </li>
           </ul>
-          <p>29 kr/md</p>
+          <p className="price">9 kr/md</p>
           <button>Tilføj til kurv</button>
         </article>
         <article className="big">
-          <h2>Avanceret</h2>
-          <p>Bedst til</p>
+          <div>
+            <h2>Avanceret</h2>
+            <h4>Bedst til små projekter</h4>
+          </div>
           <ul>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />5 hjemmesider
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />
+              200GB SSD
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />
+              Ubegrænsede mailkonti
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />
+              Daglige backups
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />
+              Daglig gendannelse
+            </li>
           </ul>
-          <p><FontAwesomeIcon icon={faWordpress} />Også inkluderet</p>
-          <p>29 kr/md</p>
+          <p>
+            <FontAwesomeIcon icon={faWordpress} /> 1-click
+            Wordpress-installation også inkluderet
+          </p>
+          <p className="price">29 kr/md</p>
           <button onClick={handleClick}>Tilføj til kurv</button>
         </article>
         <article>
-          <h2>Avanceret</h2>
-          <p>Bedst til</p>
+          <div>
+            <h2>Rutineret</h2>
+            <h4>Bedst til blogs</h4>
+          </div>
           <ul>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
-            <li><FontAwesomeIcon icon={faArrowRight} /></li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />1 hjemmeside
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />
+              100GB SSD
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />
+              Ubegrænsede mailkonti
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faArrowRight} />
+              Daglige backups
+            </li>
           </ul>
-          <p><FontAwesomeIcon icon={faWordpress} />Også inkluderet</p>
-          <p>29 kr/md</p>
+          <p>
+            <FontAwesomeIcon icon={faWordpress} /> 1-click
+            Wordpress-installation også inkluderet
+          </p>
+          <p className="price">19 kr/md</p>
           <button>Tilføj til kurv</button>
         </article>
       </div>
@@ -61,13 +107,16 @@ const Choose = () => {
         <h2>Inkluderet i alle pakker</h2>
         <div>
           <section>
-            <h3>Gratis</h3>
+            <h3>Gratis domæne i 1 år</h3>
+            <p>Alle vores pakker indeholder et gratis domæne i et helt år, så du kommer godt fra start</p>
           </section>
           <section>
-            <h3>Gratis</h3>
+            <h3>Gratis hjemmesideprogram</h3>
+            <p>Begynd at bygge din online drøm med vores brugervenlige hjemmesideprogram.</p>
           </section>
           <section>
-            <h3>Gratis</h3>
+            <h3>Gratis Google Ads-kredit</h3>
+            <p>Få trafik på din hjemmeside med Google Ads. Få 1 måned gratis, når du tilmelder dig.</p>
           </section>
         </div>
       </article>

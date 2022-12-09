@@ -3,13 +3,15 @@ import { StyledChoose } from "./Styled.Choose";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faWordpress } from "@fortawesome/free-brands-svg-icons";
+
+import Cart from "./Cart"; // Import the Cart component
+
 const Choose = () => {
   const [cartItems, setCartItems] = useState([]);
 
   const handleClick = () => {
     setCartItems([...cartItems, { id: Date.now(), name: "Item" }]);
 
-    window.location.href = "/domain";
   };
 
   return (
@@ -72,6 +74,11 @@ const Choose = () => {
           </p>
           <p className="price">29 kr/md</p>
           <button onClick={handleClick}>Tilføj til kurv</button>
+          <div>
+            {cartItems.map((item) => (
+              <div key={item.id}>{item.name}</div>
+            ))}
+          </div>
         </article>
         <article>
           <div>
@@ -108,15 +115,24 @@ const Choose = () => {
         <div>
           <section>
             <h3>Gratis domæne i 1 år</h3>
-            <p>Alle vores pakker indeholder et gratis domæne i et helt år, så du kommer godt fra start</p>
+            <p>
+              Alle vores pakker indeholder et gratis domæne i et helt år, så du
+              kommer godt fra start
+            </p>
           </section>
           <section>
             <h3>Gratis hjemmesideprogram</h3>
-            <p>Begynd at bygge din online drøm med vores brugervenlige hjemmesideprogram.</p>
+            <p>
+              Begynd at bygge din online drøm med vores brugervenlige
+              hjemmesideprogram.
+            </p>
           </section>
           <section>
             <h3>Gratis Google Ads-kredit</h3>
-            <p>Få trafik på din hjemmeside med Google Ads. Få 1 måned gratis, når du tilmelder dig.</p>
+            <p>
+              Få trafik på din hjemmeside med Google Ads. Få 1 måned gratis, når
+              du tilmelder dig.
+            </p>
           </section>
         </div>
       </article>

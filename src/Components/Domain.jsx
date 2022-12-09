@@ -5,7 +5,7 @@ import { StyledDomain } from "./Styled.Domain";
 const Domain = () => {
   return (
     <StyledDomain>
-      <div>
+      <div className="container">
         <form>
             <input placeholder="skriv dit domænenavn her"/>
             <select name="domains">
@@ -17,7 +17,7 @@ const Domain = () => {
         </form>
         <h2>Du er næsten i mål med din bestilling</h2>
       </div>
-      <Cart className="cart"/>
+      <Cart />
     </StyledDomain>
   );
 };

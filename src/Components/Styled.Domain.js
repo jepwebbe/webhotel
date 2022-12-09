@@ -12,31 +12,52 @@ export const StyledDomain = styled.section`
   height: 1024px;
   display: grid;
   grid-template-columns: 1fr 0.9fr;
-  div {
-    padding-left: 5rem;
+  .container {
+    margin: 4rem auto;
     form {
-    margin: 3.5rem auto 0 auto;
-    gap: 1rem;
-    input {
-      height: 1.5rem;
-      width: 50%;
-      border-radius: 10px;
+      display: flex;
+      gap: 1rem;
+      input {
+        width: 15rem;
+        border-radius: 10px;
+        border: none;
+        height: 2rem;
+        background-color: ${lightBlue};
+        ::placeholder {
+          text-align: center;
+          font-size: 0.8rem;
+          font-style: italic;
+        }
+
+      }
+      select {
+        border-radius: 10px;
+        background-color: ${lightBlue};
+        border: none;
+        height: 2rem;
+        text-align: center;
+        cursor: pointer;
+        font-size: 0.8rem;
+        option {
+          border-radius: 20px;
+        }
+      }
+      button {
+        background-color: ${normalBlue};
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        height: 2rem;
+        width: 3rem;
+        font-size: 0.8rem;
+        :hover {
+          background-color: ${darkBlue};
+        }
+      }
     }
-    select {
-      height: 1.5rem;
-      border-radius: 10px;
+    h2 {
+      color: white;
     }
   }
-  button {
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    background-color: ${normalBlue};
-    color: white;
-    border: none;
-    border-radius: 10px;
-  }
-  }
-  .cart {
-  }
-  
 `;
